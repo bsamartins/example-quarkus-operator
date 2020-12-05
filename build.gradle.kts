@@ -15,5 +15,11 @@ dependencies {
 
     implementation(kotlin("stdlib"))
     implementation("io.quarkus:quarkus-kubernetes-client")
+    implementation("io.quarkus:quarkus-container-image-jib")
     implementation("io.javaoperatorsdk:operator-framework:1.3.0")
+}
+
+tasks.register<io.quarkus.gradle.tasks.QuarkusBuild>("quarkusBuildDockerImage") {
+    System.setProperty("quarkus.container-image.build", true.toString())
+    System.setProperty("quarkus.container-image.image", "example-quarkus-operator")
 }

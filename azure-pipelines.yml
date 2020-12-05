@@ -21,3 +21,10 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'build'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'bsamartins@dockerhub'
+    repository: 'example-quarkus-operator'
+    command: 'push'
+    tags: 'latest'
+    addPipelineData: false
