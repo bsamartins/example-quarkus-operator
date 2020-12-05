@@ -24,7 +24,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'bsamartins@dockerhub'
-    repository: 'example-quarkus-operator'
+    repository: 'bsamartins/example-quarkus-operator'
     command: 'push'
     tags: 'latest'
     addPipelineData: false
