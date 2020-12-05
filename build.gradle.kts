@@ -21,5 +21,5 @@ dependencies {
 
 tasks.register<io.quarkus.gradle.tasks.QuarkusBuild>("quarkusBuildDockerImage") {
     System.setProperty("quarkus.container-image.build", true.toString())
-    System.setProperty("quarkus.container-image.image", "example-quarkus-operator")
+    System.setProperty("quarkus.container-image.image", "bsamartins/example-quarkus-operator")
 }
