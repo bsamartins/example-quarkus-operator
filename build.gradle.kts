@@ -23,3 +23,11 @@ tasks.register<io.quarkus.gradle.tasks.QuarkusBuild>("quarkusBuildDockerImage") 
     System.setProperty("quarkus.container-image.build", true.toString())
     System.setProperty("quarkus.container-image.image", "bsamartins/example-quarkus-operator")
 }
+
+tasks.register<io.quarkus.gradle.tasks.QuarkusBuild>("quarkusBuildDockerNativeImage") {
+    System.setProperty("quarkus.package.type", "native")
+    System.setProperty("quarkus.native.container-build", true.toString())
+
+    System.setProperty("quarkus.container-image.build", true.toString())
+    System.setProperty("quarkus.container-image.image", "bsamartins/example-quarkus-operator:native")
+}
